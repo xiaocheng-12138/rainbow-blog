@@ -1,0 +1,45 @@
+export type Theme = 'dark' | 'light';
+/**
+ * 站点配置
+ * @author LiQingSong
+ */
+export interface SettingsType {
+    /**
+     * 站点名称
+     */
+    siteTitle: string;
+
+    /**
+     * 站点本地存储Token 的 Key值
+     */
+    siteTokenKey: string;
+  
+    /**
+     * Ajax请求头发送Token 的 Key值
+     */
+    ajaxHeadersTokenKey: string;
+  
+    /**
+     * Ajax返回值不参加统一验证的api地址
+     */
+    ajaxResponseNoVerifyUrl: string[];
+
+    /**
+     * UniversalLayout 模板主题
+     */
+    theme: Theme;
+}
+  
+const settings: SettingsType = {
+    siteTitle: 'ADMIN-ELEMENT-VUE',   
+    siteTokenKey: 'admin_element_vue_token',
+    ajaxHeadersTokenKey: 'x-token',
+    ajaxResponseNoVerifyUrl: [
+        '/user/login', // 用户登录
+        '/user/info', // 获取用户信息
+    ],
+    theme: 'light',
+};
+
+export default settings;
+  
