@@ -2,6 +2,7 @@
   <div class="home">
     <img alt="Vue logo" src="@/assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <el-button @click="test" >000000000000</el-button>
   </div>
 </template>
 
@@ -14,5 +15,13 @@ export default defineComponent({
   components: {
     HelloWorld,
   },
+  setup() {
+    const test =()=>{
+      console.log(process.env);
+    }
+    return{
+      test
+    }
+  }
 });
 </script>
